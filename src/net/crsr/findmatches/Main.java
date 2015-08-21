@@ -19,6 +19,7 @@ public class Main {
       final String file = readFile("data/Lord Arthur Savile's Crime.txt");
 
       final NFA nfa = NFABuilder.build(patterns);
+      System.out.println("Results: rule number (line number in patterns file) at ending location");
       System.out.println(nfa.matches(file, 0).toString());
       
     } catch (IOException e) {
